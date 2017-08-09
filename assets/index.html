@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>js常用工具函数集合</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta name="MobileOptimized" content="320">
+    <!-- build:css css/style.min.css -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- endbuild -->
+    <style>
+    #parent{ width: 400px; padding: 50px; border: 1px solid #333; background-color: #eee; text-align: center; } 
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <button id="child" class="test" type="button">这是一个测试按钮</button>
+    </div>
+    <!-- build:js js/tool.min.js -->
+    <script src="js/tool.js"></script>
+    <!-- endbuild -->
+    <script>
+    +function(){
+
+        var parent = T.getEleById( 'parent' );
+        var child = T.getEleById( 'child' );
+
+        if(document.addEventListener){
+            parent.addEventListener('DOMMouseScroll',scrollFunc,false);
+        }//W3C
+        window.onmousewheel=parent.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+
+        var scrollFunc = function(e){
+
+            consol.log( T.getWheelDirect(e) )
+
+        };
+    }();
+    </script>
+</body>
+<!-- END BODY -->
+</html>

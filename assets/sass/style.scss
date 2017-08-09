@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.4.1 
+2010-03-01
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-family:sans-serif;
+    color:#333;
+    vertical-align:baseline;
+    background:transparent;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size : 20px;
+}
+
+body {
+    height: 100%;
+    line-height:1;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%; // 解决APP字体突然变大的问题
+    background: #5dcff2;
+}
+body.light{
+    background: #f2f2f2;
+}
+
+:focus {
+    outline: 1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+
+nav, ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #eb711c;
+    > &:hover{
+        text-decoration: underline;
+    }
+}
+
+b {
+    font-weight: normal
+}
+
+i, em {
+    font-style: normal;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+// ios下消除内阴影
+input, textarea {
+    border: 0;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+/* custom font size */
+h1, h2, h3 {
+    padding: torem(10px);
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+
+sub, sup{
+    position: relative;
+    right: 8%;
+    top: -50%;
+    display: inline-block;
+    padding-right: torem(2px);
+    width: torem(20px);
+    height: torem(20px);
+    line-height: torem(20px);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*height:1%}
+
+.overflow-hidden{ height: 100%; overflow: hidden!important; }
+
+.triangle{
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-width: torem(4px) torem(8px);
+    font-size: 0;
+    overflow: hidden;
+    &.left{
+        border-style: dashed solid dashed dashed;
+        border-color: transparent #333 transparent transparent;
+    }
+    &.right{
+        border-style: dashed dashed dashed solid;
+        border-color: transparent transparent transparent #333;
+    }
+    &.top{
+        border-width: torem(8px) torem(4px);
+        border-style: dashed dashed solid dashed;
+        border-color: transparent transparent #333 transparent;
+    }
+    &.bottom{
+        border-width: torem(8px) torem(4px);
+        border-style: solid dashed dashed dashed;
+        border-color: #333 transparent transparent transparent;
+    }
+}
+/* lay out */
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+//首页
+.wrapper{
+    width: 100%;
+    min-width: 940px;
+}
+header{
+    width: 1440px;
+    margin: 0 auto 40px;
+    > img{
+        width: 1440px;
+        height: 447px;
+    }
+}
+.main{
+    width: 940px;
+    margin: 0 auto 20px;
+}
+.item{
+    margin-bottom: 40px;
+    .top{
+        padding: 0 20px;
+        background: #4c9db5;
+        > h3{
+            line-height: 36px;
+            color: #fff;
+        }
+    }
+    .content{
+        padding: 15px 0 0 15px;
+        min-height: 151px;
+        background: #fff;
+        .list{
+            > li{
+                float: left;
+                width: 295px;
+                margin: 0 13px 13px 0;
+                > a{
+                    > span{
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        font-size: 14px;
+                        overflow: hidden;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    > img{
+                        width: 295px;
+                        height: 107px;
+                    }
+                }
+            }
+        }
+    }
+}
