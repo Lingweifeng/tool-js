@@ -107,11 +107,11 @@ var Tool = (function(){
 		getQueryString: function(name) { 
 			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 			var r = window.location.search.substr(1).match(reg);
-			if (r != null) return unescape(r[2]); 
+			if (r != null) return unescape(r[2]);
 			return null;
 		},
 		/**
-		 * description: 设置cookie
+		 * description: 	
 		 * @param: name: cookie名
 		 * @param: value: cookie值
 		 * @param: days: 有效时间(天)
@@ -128,14 +128,11 @@ var Tool = (function(){
 	     * example: T.getCookie( 'test' ) => 1234
 	     */
 	    getCookie: function (name) {
-	        var arr = document.cookie.split(';');
-	        for (var i = 0; i < arr.length; i++) {
-	            var arr2 = arr[i].split('=');
-	            if (arr2[0] == name) {
-	                return arr2[1];
-	            }
-	        }
-	        return '';
+	        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	        if(arr=document.cookie.match(reg))
+	        	return unescape(arr[2]);
+	        else
+	        	return null;
 	    },
 	    /**
 		 * description: 删除cookie
@@ -325,3 +322,4 @@ Date.prototype.format = function(format) {
 String.prototype.toDate = function(){
     return new Date(Date.parse(this.replace(/-/g, "/")));
 }
+1300/31*18(3-20)=
