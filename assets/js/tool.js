@@ -322,4 +322,3 @@ Date.prototype.format = function(format) {
 String.prototype.toDate = function(){
     return new Date(Date.parse(this.replace(/-/g, "/")));
 }
-1300/31*18(3-20)=
